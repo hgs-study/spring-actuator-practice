@@ -16,6 +16,10 @@ dependencies {
 
 ![image](https://user-images.githubusercontent.com/76584547/161757560-15ed2a9f-936b-4d8c-bfd6-bcd0e0e8f3a1.png)
 
++ actuator + circuitbreaker
+```
+    https://resilience4j.readme.io/docs/getting-started-3
+```
 
 + 모든 엔드포인트 사용
 ```java
@@ -27,134 +31,6 @@ management:
       exposure:
         include: "*"
 
-```
-
-```
-// 20220405222700
-// http://localhost:8080/actuator
-
-{
-  "_links": {
-    "self": {
-      "href": "http://localhost:8080/actuator",
-      "templated": false
-    },
-    "beans": {
-      "href": "http://localhost:8080/actuator/beans",
-      "templated": false
-    },
-    "caches-cache": {
-      "href": "http://localhost:8080/actuator/caches/{cache}",
-      "templated": true
-    },
-    "caches": {
-      "href": "http://localhost:8080/actuator/caches",
-      "templated": false
-    },
-    "health": {
-      "href": "http://localhost:8080/actuator/health",
-      "templated": false
-    },
-    "health-path": {
-      "href": "http://localhost:8080/actuator/health/{*path}",
-      "templated": true
-    },
-    "info": {
-      "href": "http://localhost:8080/actuator/info",
-      "templated": false
-    },
-    "conditions": {
-      "href": "http://localhost:8080/actuator/conditions",
-      "templated": false
-    },
-    "configprops": {
-      "href": "http://localhost:8080/actuator/configprops",
-      "templated": false
-    },
-    "configprops-prefix": {
-      "href": "http://localhost:8080/actuator/configprops/{prefix}",
-      "templated": true
-    },
-    "env": {
-      "href": "http://localhost:8080/actuator/env",
-      "templated": false
-    },
-    "env-toMatch": {
-      "href": "http://localhost:8080/actuator/env/{toMatch}",
-      "templated": true
-    },
-    "loggers": {
-      "href": "http://localhost:8080/actuator/loggers",
-      "templated": false
-    },
-    "loggers-name": {
-      "href": "http://localhost:8080/actuator/loggers/{name}",
-      "templated": true
-    },
-    "heapdump": {
-      "href": "http://localhost:8080/actuator/heapdump",
-      "templated": false
-    },
-    "threaddump": {
-      "href": "http://localhost:8080/actuator/threaddump",
-      "templated": false
-    },
-    "metrics-requiredMetricName": {
-      "href": "http://localhost:8080/actuator/metrics/{requiredMetricName}",
-      "templated": true
-    },
-    "metrics": {
-      "href": "http://localhost:8080/actuator/metrics",
-      "templated": false
-    },
-    "scheduledtasks": {
-      "href": "http://localhost:8080/actuator/scheduledtasks",
-      "templated": false
-    },
-    "mappings": {
-      "href": "http://localhost:8080/actuator/mappings",
-      "templated": false
-    }
-  }
-}
-```
-
-+ 메모리 사용량
-```java
-// 20220405231319
-// http://localhost:8080/actuator/metrics/jvm.memory.used
-
-{
-  "name": "jvm.memory.used",
-  "description": "The amount of used memory",
-  "baseUnit": "bytes",
-  "measurements": [
-    {
-      "statistic": "VALUE",
-      "value": 93306048
-    }
-  ],
-  "availableTags": [
-    {
-      "tag": "area",
-      "values": [
-        "heap",
-        "nonheap"
-      ]
-    },
-    {
-      "tag": "id",
-      "values": [
-        "Compressed Class Space",
-        "PS Survivor Space",
-        "PS Old Gen",
-        "Metaspace",
-        "PS Eden Space",
-        "Code Cache"
-      ]
-    }
-  ]
-}
 ```
 
 + 특정 엔드포인트만 허용
