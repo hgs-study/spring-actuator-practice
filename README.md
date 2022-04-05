@@ -1,5 +1,11 @@
 # spring-actuator-practice
 
++ spring 공홈
+```
+    https://docs.spring.io/spring-boot/docs/current/actuator-api/htmlsingle/#metrics
+```
+
+
 + 의존성 추가
 ```java
 dependencies {
